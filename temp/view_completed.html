@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Completed Requests</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+<header>Completed Requests</header>
+
+<div class="container">
+
+  {% if data %}
+    {% for line in data %}
+      <div class="card">{{ line }}</div>
+    {% endfor %}
+  {% else %}
+    <div class="card">No completed requests yet.</div>
+  {% endif %}
+
+  <a class="btn" href="{{ url_for('admin_dashboard') }}">Back</a>
+
+</div>
+</body>
+</html>

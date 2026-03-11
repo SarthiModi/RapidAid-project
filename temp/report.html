@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Report Accident</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<header>Report an Accident</header>
+
+<div class="container">
+  <form method="POST">
+    <input type="text" name="location" placeholder="Accident Location" required>
+
+    <select name="severity" required>
+      <option value="normal">Normal</option>
+      <option value="serious">Serious</option>
+    </select>
+
+    <input type="text" name="contact" placeholder="Contact Number" required>
+
+    <button class="btn" type="submit">Submit Report</button>
+  </form>
+
+  <a class="btn" href="{{ url_for('user_dashboard') }}">Back</a>
+</div>
+
+</body>
+</html>

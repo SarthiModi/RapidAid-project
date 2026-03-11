@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+<header>User Dashboard</header>
+
+<div class="container">
+  <h2 style="color:white; text-align:center;">Welcome, {{ username }}!</h2>
+
+  <div style="text-align:center;">
+    <a href="{{ url_for('report') }}" class="btn">Report Accident</a>
+    <a href="{{ url_for('check_status') }}" class="btn">Check Accident Status</a>
+    <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+  </div>
+
+</div>
+
+</body>
+</html>

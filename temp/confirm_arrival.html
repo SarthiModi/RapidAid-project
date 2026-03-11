@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Confirm Arrival</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<header>Confirm Ambulance Arrival</header>
+
+<div class="container">
+  <form method="POST">
+    <input type="text" name="request_id" placeholder="Request ID" required>
+    <button class="btn" type="submit">Confirm</button>
+  </form>
+
+  <a class="btn" href="{{ url_for('user_dashboard') }}">Back</a>
+</div>
+
+</body>
+</html>

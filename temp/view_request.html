@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pending Accident Requests</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+<header>Pending Requests</header>
+
+<div class="container">
+  {% if data %}
+    {% for line in data %}
+      <div class="card">{{ line }}</div>
+    {% endfor %}
+  {% else %}
+    <div class="card">No pending requests.</div>
+  {% endif %}
+
+  <form method="POST" action="{{ url_for('approve_request') }}">
+    <button class="btn" type="submit">Approve Next Request</button>
+  </form>
+
+  <a class="btn" href="{{ url_for('admin_dashboard') }}">Back</a>
+</div>
+
+</body>
+</html>

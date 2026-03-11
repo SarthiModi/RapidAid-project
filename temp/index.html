@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RapidAid - Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>🚑 RapidAid Emergency Response System</header>
+
+  <div class="container">
+    <h2 style="text-align:center; color:white;">Welcome to RapidAid</h2>
+    <p style="text-align:center; color:white; margin-bottom:20px;">
+      A smart and efficient emergency response allocation platform.
+    </p>
+    <div style="text-align:center;">
+      <a href="{{ url_for('login') }}" class="btn">Login</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ambulances</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+<header>Ambulance List</header>
+
+<div class="container">
+  {% for line in data %}
+    <div class="card">{{ line }}</div>
+  {% endfor %}
+
+  <a class="btn" href="{{ url_for('admin_dashboard') }}">Back</a>
+</div>
+
+</body>
+</html>

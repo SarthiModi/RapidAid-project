@@ -1,0 +1,179 @@
+/* ---------------------------------------------------
+   GOOGLE FONT
+------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ---------------------------------------------------
+   GLOBAL SETUP
+------------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url("/static/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+/* ---------------------------------------------------
+   HEADER
+------------------------------------------------------ */
+header {
+  background: rgba(0, 122, 255, 0.9);
+  padding: 18px;
+  text-align: center;
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ---------------------------------------------------
+   CONTAINER WITH GLASS EFFECT
+------------------------------------------------------ */
+.container {
+  width: 90%;
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  color: white;
+}
+
+/* ---------------------------------------------------
+   BUTTONS
+------------------------------------------------------ */
+.btn, button {
+  display: inline-block;
+  background: #007bff;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-top: 12px;
+  transition: 0.25s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover, button:hover {
+  background: #005fcc;
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------
+   INPUT FIELDS
+------------------------------------------------------ */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  margin-bottom: 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 8px rgba(0,123,255,0.7);
+}
+
+/* ---------------------------------------------------
+   CARD STYLE
+------------------------------------------------------ */
+.card {
+  background: rgba(255,255,255,0.2);
+  padding: 18px;
+  border-radius: 10px;
+  margin: 12px 0;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ---------------------------------------------------
+   TABLE (IF ANY)
+------------------------------------------------------ */
+table {
+  width: 100%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+table th, table td {
+  padding: 12px;
+}
+
+table th {
+  background: rgba(0,123,255,0.7);
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ---------------------------------------------------
+   FLASH MESSAGES
+------------------------------------------------------ */
+.alert {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.alert-success { background: #28a745cc; }
+.alert-danger { background: #dc3545cc; }
+.alert-warning { background: #ffc107cc; color: black; }
+.alert-info { background: #17a2b8cc; }
+
+/* ---------------------------------------------------
+   STATUS COLORS
+------------------------------------------------------ */
+.status-card {
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.pending { background: #ffcc00cc; }
+.assigned { background: #ff8800cc; }
+.completed { background: #22bb33cc; }
+
+/* ---------------------------------------------------
+   LOGOUT BUTTON (TOP RIGHT)
+------------------------------------------------------ */
+.logout-btn {
+  background: white !important;
+  color: #007bff !important;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.logout-btn:hover {
+  background: #e0ecff !important;
+}

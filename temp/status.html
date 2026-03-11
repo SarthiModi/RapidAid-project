@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Status</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+<header>Accident Status</header>
+
+<div class="container">
+
+  {% if data %}
+    {% for line in data %}
+      {% if "Pending" in line %}
+        <div class="status-card pending">{{ line }}</div>
+
+      {% elif "Assigned" in line or "dispatched" in line %}
+        <div class="status-card assigned">{{ line }}</div>
+
+      {% elif "Completed" in line or "available" in line %}
+        <div class="status-card completed">{{ line }}</div>
+
+      {% else %}
+        <div class="card">{{ line }}</div>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <div class="card">No updates available.</div>
+  {% endif %}
+
+  <a class="btn" href="{{ url_for('user_dashboard') }}">Back</a>
+
+</div>
+
+</body>
+</html>
